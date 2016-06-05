@@ -9,8 +9,14 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER Erik Hage
 
-# Install Nginx
+#Setting ENV variables
+ENV TERM xterm
 
+#Install text editor nano
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "-y", "nano"]
+
+# Install Nginx
 # Add application repository URL to the default sources
 #RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >>/etc/apt/sources.list
 
